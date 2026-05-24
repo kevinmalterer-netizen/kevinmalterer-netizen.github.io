@@ -3,7 +3,7 @@
 Minimal public website for TikTok Developer App Review.
 
 Before publishing:
-1. Replace `opusclip882@proton.me` in all HTML files.
+1. Confirm contact email is `882sniper@proton.me`.
 2. Upload all files to your GitHub Pages repository.
 3. Enable GitHub Pages from the `main` branch and `/root`.
 
