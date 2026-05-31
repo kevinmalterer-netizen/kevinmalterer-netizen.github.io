@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Zero Office app icon</title>
+  <desc id="desc">A dark Zero Office icon with a bright creator workflow mark.</desc>
+  <rect width="512" height="512" rx="96" fill="#111111"/>
+  <circle cx="186" cy="188" r="78" fill="#00f2ea"/>
+  <circle cx="326" cy="188" r="78" fill="#ff0050"/>
+  <circle cx="256" cy="262" r="92" fill="#ffffff"/>
+  <path d="M176 333h160v38H176v-38zm13-109h134l-77 91h88v38H178l77-91h-66v-38z" fill="#111111"/>
+</svg>
