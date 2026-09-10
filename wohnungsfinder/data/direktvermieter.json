@@ -1,0 +1,121 @@
+{
+  "stand": "2026-09-10",
+  "hinweis": "Vermieter in Itzehoe, die NICHT nur über ImmoScout/Immowelt inserieren. Recherchiert am 10.09.2026 über öffentliche Quellen. Adressen und Telefonnummern vor der Bewerbung kurz gegenprüfen – Zeiten und Zuständigkeiten ändern sich.",
+  "vermieter": [
+    {
+      "name": "Wankendorfer Baugenossenschaft für Schleswig-Holstein eG",
+      "typ": "Genossenschaft",
+      "adresse": "Feldschmiede 52, 25524 Itzehoe (Geschäftsstelle Itzehoe)",
+      "telefon": "04821 67730",
+      "email": "info@wankendorfer.de",
+      "web": "https://www.wankendorfer.de/wohnungssuche/",
+      "sprechzeiten": "Mo 09:00–12:30, Do 14:00–16:00",
+      "bewerbung": "Online-Wohnungsbewerbung – laut eigener Aussage ist kein persönlicher Besuch nötig.",
+      "prio": 1
+    },
+    {
+      "name": "Wohngenossenschaft Alte Gärtnerei Itzehoe eG",
+      "typ": "Genossenschaft",
+      "adresse": "Sandkuhle 23 + 25, 25524 Itzehoe",
+      "telefon": "",
+      "email": "",
+      "web": "https://www.alte-gaertnerei-itzehoe.de/kontakt/",
+      "sprechzeiten": "",
+      "bewerbung": "36 Wohnungen, 42–83 m², 2–3 Zimmer, KfW55, barrierefrei mit Aufzug. Klein – Warteliste, direkt anfragen.",
+      "prio": 1
+    },
+    {
+      "name": "Wohnungsbaugenossenschaft \"Wiederaufbau\" Schleswig eG",
+      "typ": "Genossenschaft",
+      "adresse": "Steinbrückstr. 10, 25524 Itzehoe (Bestand Itzehoe)",
+      "telefon": "",
+      "email": "",
+      "web": "",
+      "sprechzeiten": "",
+      "bewerbung": "Adresse aus Branchenverzeichnis – Kontaktdaten vor der Bewerbung prüfen.",
+      "prio": 2
+    },
+    {
+      "name": "TAG Wohnen & Service GmbH",
+      "typ": "Wohnungsunternehmen",
+      "adresse": "Bestand in Itzehoe: Schauenburger Str., Twietbergstr., Edendorf (Emil-von-Behring-Str., Albert-Schweitzer-Ring). Zuständiges Mieterbüro: Eichenkamp 14, 25337 Elmshorn",
+      "telefon": "040 38032-180 oder 0800 2903000",
+      "email": "",
+      "web": "https://tag-wohnen.de/itzehoe",
+      "sprechzeiten": "Beratung zur Wohnungssuche Do 14:00–17:00",
+      "bewerbung": "Großer Bestand, eigenes Mieterportal und App. Inseriert teils auch auf Portalen, hat aber eine eigene Objektsuche.",
+      "prio": 1
+    },
+    {
+      "name": "Schoof Immobilien GmbH & Co. KG",
+      "typ": "Hausverwaltung / Makler",
+      "adresse": "Beethovenstr. 2, 25524 Itzehoe",
+      "telefon": "04821 15150",
+      "email": "",
+      "web": "https://schoof-immobilien.de/",
+      "sprechzeiten": "",
+      "bewerbung": "Verwaltet eigene Bestände – Initiativbewerbung lohnt sich.",
+      "prio": 2
+    },
+    {
+      "name": "Hausverwaltung Hornbogen e.K.",
+      "typ": "Hausverwaltung",
+      "adresse": "Itzehoe – Anschrift über die Website",
+      "telefon": "",
+      "email": "",
+      "web": "https://www.hausverwaltung-hornbogen.de/",
+      "sprechzeiten": "",
+      "bewerbung": "Steht im offiziellen Vermieter-Verzeichnis der Stadt Itzehoe.",
+      "prio": 2
+    },
+    {
+      "name": "Ohlsen GmbH / Nils Ohlsen Immobilien",
+      "typ": "Hausverwaltung / Makler",
+      "adresse": "Itzehoe",
+      "telefon": "",
+      "email": "",
+      "web": "https://www.ohlsen-iz.de/",
+      "sprechzeiten": "",
+      "bewerbung": "Hausverwaltung und Makler vor Ort.",
+      "prio": 2
+    },
+    {
+      "name": "Immobilien Gatermann (Mark Gatermann)",
+      "typ": "Makler / Verwaltung",
+      "adresse": "Kirchenstr. 7, 25524 Itzehoe",
+      "telefon": "04821 2427 (Nummer unvollständig überliefert – bitte prüfen)",
+      "email": "",
+      "web": "",
+      "sprechzeiten": "",
+      "bewerbung": "",
+      "prio": 3
+    },
+    {
+      "name": "Dr. Schröder Immobilien GmbH",
+      "typ": "Hausverwaltung",
+      "adresse": "Deutsch-Ordens-Str. 66, 25551 Hohenlockstedt",
+      "telefon": "",
+      "email": "",
+      "web": "",
+      "sprechzeiten": "",
+      "bewerbung": "Umland – steht ebenfalls im Vermieter-Verzeichnis der Stadt.",
+      "prio": 3
+    },
+    {
+      "name": "Stadt Itzehoe – Abteilung Sozial- und Wohnungswesen (WBS & Wohngeld)",
+      "typ": "Behörde",
+      "adresse": "Reichenstraße 23, 25524 Itzehoe",
+      "telefon": "04821 603-385 (Scharlemann, A–J) / 04821 603-299 (Lönnies, K–Q)",
+      "email": "Abteilung_Sozial_und_Wohnungswesen@itzehoe.de",
+      "web": "https://www.itzehoe.de/rathaus/rathaus/was-erledige-ich-wo/detail/wohnberechtigungsschein-389",
+      "sprechzeiten": "Mo, Di, Do 08:30–12:00; Do zusätzlich 14:00–18:00; Mi geschlossen",
+      "bewerbung": "WBS-Antrag als PDF auf der Website. Ohne WBS kommt man an geförderte Wohnungen nicht ran – früh beantragen.",
+      "prio": 1
+    }
+  ],
+  "goldquelle": {
+    "titel": "Vermieter-Verzeichnis für das Itzehoer Stadtgebiet (Stadt Itzehoe, PDF)",
+    "url": "https://www.itzehoe.de/fileadmin/Stadt_Itzehoe/Dateien/Aktuelles/2023/Vermieter-Verzeichnis_ab_03.2022.pdf",
+    "warum": "Von der Stadt gepflegte Liste der Vermieter und Hausverwaltungen im Stadtgebiet – genau die Adressen, die nicht auf den großen Portalen stehen. Herunterladen, durchtelefonieren, überall auf die Liste setzen lassen."
+  }
+}

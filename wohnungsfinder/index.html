@@ -76,6 +76,20 @@
   .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   .chip { font-size: 13px; padding: 3px 10px; border-radius: 999px;
           background: var(--card); border: 1px solid var(--line); color: var(--muted); }
+  .vermieter { display: grid; gap: 12px; }
+  .vm { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; }
+  .vm h3 { margin: 0; font-size: 16px; }
+  .vm .typ { font-size: 12px; padding: 2px 8px; border-radius: 999px; align-self: start;
+             background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+  .vm dl { grid-column: 1 / -1; margin: 4px 0 0; display: grid; gap: 2px 10px;
+           grid-template-columns: max-content 1fr; font-size: 14px; }
+  .vm dt { color: var(--muted); }
+  .vm dd { margin: 0; overflow-wrap: anywhere; }
+  .vm .wie { grid-column: 1 / -1; margin: 8px 0 0; font-size: 14px;
+             border-left: 3px solid var(--accent); padding-left: 10px; }
+  .gold { background: var(--ok-soft); border-color: transparent; }
+  .gold h3 { margin: 0 0 6px; font-size: 16px; }
+  .gold p { margin: 0 0 8px; font-size: 14px; }
   ol.check { padding-left: 20px; } ol.check li { margin-bottom: 6px; }
   footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--line);
            font-size: 13px; color: var(--muted); }
@@ -141,6 +155,14 @@
 
 <h2>Direkt weitersuchen</h2>
 <div class="portals" id="portals"></div>
+
+<h2>Direkt beim Vermieter bewerben</h2>
+<p style="margin:0 0 12px;font-size:14px;color:var(--muted)">
+  Genossenschaften, Hausverwaltungen und kommunale Stellen in Itzehoe, die ihre Wohnungen
+  überwiegend <strong>nicht</strong> über die großen Portale vergeben. Hier lohnt der direkte Anruf.
+</p>
+<div id="gold"></div>
+<div class="vermieter" id="vermieter"></div>
 
 <h2>Umkreis Itzehoe</h2>
 <section class="card">
@@ -384,6 +406,60 @@
     });
   }
 
+  function renderVermieter(data) {
+    var g = data.goldquelle;
+    if (g && g.url) {
+      var box = el("section", "card gold");
+      var h = el("h3");
+      var a = el("a", null, g.titel);
+      a.href = g.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+      h.appendChild(a); box.appendChild(h);
+      box.appendChild(el("p", null, g.warum));
+      $("gold").appendChild(box);
+    }
+
+    var list = $("vermieter");
+    var felder = [
+      ["adresse", "Adresse"], ["telefon", "Telefon"],
+      ["email", "E-Mail"], ["sprechzeiten", "Sprechzeiten"]
+    ];
+    (data.vermieter || []).slice().sort(function (a, b) {
+      return (a.prio || 9) - (b.prio || 9);
+    }).forEach(function (v) {
+      var c = el("article", "card vm");
+      var head = el("div");
+      var h = el("h3");
+      if (v.web) {
+        var link = el("a", null, v.name);
+        link.href = v.web; link.target = "_blank"; link.rel = "noopener noreferrer";
+        h.appendChild(link);
+      } else { h.textContent = v.name; }
+      head.appendChild(h);
+      c.appendChild(head);
+      if (v.typ) c.appendChild(el("span", "typ", v.typ));
+
+      var dl = el("dl");
+      felder.forEach(function (f) {
+        if (!v[f[0]]) return;
+        dl.appendChild(el("dt", null, f[1]));
+        var dd = el("dd");
+        if (f[0] === "email") {
+          var m = el("a", null, v.email); m.href = "mailto:" + v.email; dd.appendChild(m);
+        } else if (f[0] === "telefon" && !/[A-Za-zÄÖÜäöü]/.test(v.telefon)) {
+          // Nur verlinken, wenn genau eine Nummer dasteht – sonst würden
+          // mehrere Nummern zu einer unbrauchbaren zusammengeklebt.
+          var t = el("a", null, v.telefon);
+          t.href = "tel:" + v.telefon.replace(/[^+0-9]/g, "");
+          dd.appendChild(t);
+        } else { dd.textContent = v[f[0]]; }
+        dl.appendChild(dd);
+      });
+      if (dl.children.length) c.appendChild(dl);
+      if (v.bewerbung) c.appendChild(el("p", "wie", v.bewerbung));
+      list.appendChild(c);
+    });
+  }
+
   bindFilters();
 
   load("data/listings.json").then(function (d) {
@@ -402,6 +478,10 @@
 
   load("data/portals.json").then(renderPortals).catch(function () {
     $("portals").appendChild(el("p", "empty", "Suchlinks konnten nicht geladen werden."));
+  });
+
+  load("data/direktvermieter.json").then(renderVermieter).catch(function () {
+    $("vermieter").appendChild(el("p", "empty", "Vermieterliste konnte nicht geladen werden."));
   });
 })();
 </script>
