@@ -1,0 +1,45 @@
+{
+  "hinweis": "Suchlinks für Itzehoe & Umkreis. Ändert ein Portal seine URL-Struktur, hier korrigieren – der Rest der Seite passt sich automatisch an.",
+  "portale": [
+    {
+      "name": "ImmobilienScout24",
+      "url": "https://www.immobilienscout24.de/Suche/de/schleswig-holstein/itzehoe/wohnung-mieten",
+      "beschreibung": "Größtes Portal, viele Makler- und Genossenschaftsangebote.",
+      "tipp": "Suchauftrag anlegen und Push-Benachrichtigung aktivieren – neue Objekte sind oft nach 2–3 Stunden weg."
+    },
+    {
+      "name": "Kleinanzeigen",
+      "url": "https://www.kleinanzeigen.de/s-wohnung-mieten/itzehoe/k0c203",
+      "beschreibung": "Viele private Vermieter, oft provisionsfrei.",
+      "tipp": "Umkreis auf 20 km stellen und Suche speichern – hier tauchen die günstigsten Wohnungen zuerst auf."
+    },
+    {
+      "name": "Immowelt",
+      "url": "https://www.immowelt.de/liste/itzehoe/wohnungen/mieten",
+      "beschreibung": "Zweitgrößtes Portal, teils exklusive Makler-Objekte.",
+      "tipp": "Auch Immonet prüfen – gehört zu Immowelt, zeigt aber gelegentlich andere Treffer."
+    },
+    {
+      "name": "WG-Gesucht",
+      "url": "https://www.wg-gesucht.de/",
+      "beschreibung": "1-Zimmer-Wohnungen, WG-Zimmer und Zwischenmiete.",
+      "tipp": "Für Übergangslösungen, bis die richtige Wohnung da ist."
+    },
+    {
+      "name": "Wohnungsbaugenossenschaften & kommunale Vermieter",
+      "url": "https://duckduckgo.com/?q=Wohnungsbaugenossenschaft+Itzehoe+Mietwohnung",
+      "beschreibung": "Genossenschaften vermieten günstig, inserieren aber oft nur auf der eigenen Website.",
+      "tipp": "Direkt anrufen und auf die Warteliste setzen lassen – das schlägt jedes Portal."
+    },
+    {
+      "name": "Stadt Itzehoe – Wohnberechtigungsschein (WBS)",
+      "url": "https://duckduckgo.com/?q=Stadt+Itzehoe+Wohnberechtigungsschein+beantragen",
+      "beschreibung": "Für geförderte Wohnungen mit deutlich niedrigerer Miete.",
+      "tipp": "WBS früh beantragen – die Bearbeitung dauert, ohne Schein kommt man an diese Wohnungen nicht ran."
+    }
+  ],
+  "umkreis": [
+    "Itzehoe", "Kellinghusen", "Wilster", "Glückstadt", "Krempe", "Lägerdorf",
+    "Heiligenstedten", "Münsterdorf", "Oelixdorf", "Breitenburg", "Hohenlockstedt", "Schenefeld"
+  ]
+}

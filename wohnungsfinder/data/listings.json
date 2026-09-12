@@ -1,0 +1,63 @@
+{
+  "stand": "2026-09-07",
+  "hinweis": "BEISPIELDATEN. Bitte durch echte Angebote ersetzen oder Datei leeren (\"wohnungen\": []). Felder: id, titel, ort, strasse, zimmer, flaeche (m²), kaltmiete, nebenkosten, kaution, etage, verfuegbar_ab (JJJJ-MM-TT), wbs (true/false), merkmale (Liste), quelle, url, notiz, demo.",
+  "wohnungen": [
+    {
+      "id": "demo-1",
+      "titel": "3-Zimmer-Wohnung mit Balkon, zentrumsnah",
+      "ort": "Itzehoe",
+      "strasse": "Musterstraße 1",
+      "zimmer": 3,
+      "flaeche": 74,
+      "kaltmiete": 620,
+      "nebenkosten": 180,
+      "kaution": 1860,
+      "etage": "2. OG",
+      "verfuegbar_ab": "2026-10-01",
+      "wbs": false,
+      "merkmale": ["Balkon", "Einbauküche", "Stellplatz"],
+      "quelle": "Beispiel",
+      "url": "",
+      "notiz": "Beispieleintrag – zeigt nur, wie eine Karte aussieht.",
+      "demo": true
+    },
+    {
+      "id": "demo-2",
+      "titel": "2-Zimmer-Wohnung, ruhige Lage (WBS erforderlich)",
+      "ort": "Lägerdorf",
+      "strasse": "",
+      "zimmer": 2,
+      "flaeche": 58,
+      "kaltmiete": 390,
+      "nebenkosten": 140,
+      "kaution": 1170,
+      "etage": "EG",
+      "verfuegbar_ab": "2026-09-15",
+      "wbs": true,
+      "merkmale": ["Garten", "Haustiere erlaubt"],
+      "quelle": "Beispiel",
+      "url": "",
+      "notiz": "Beispieleintrag.",
+      "demo": true
+    },
+    {
+      "id": "demo-3",
+      "titel": "1-Zimmer-Apartment, möbliert",
+      "ort": "Itzehoe",
+      "strasse": "",
+      "zimmer": 1,
+      "flaeche": 32,
+      "kaltmiete": 340,
+      "nebenkosten": 110,
+      "kaution": 680,
+      "etage": "3. OG",
+      "verfuegbar_ab": "2026-09-20",
+      "wbs": false,
+      "merkmale": ["Möbliert", "Aufzug"],
+      "quelle": "Beispiel",
+      "url": "",
+      "notiz": "Beispieleintrag.",
+      "demo": true
+    }
+  ]
+}
