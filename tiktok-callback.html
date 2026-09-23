@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TikTok OAuth Callback - Zero Office</title>
+  <meta name="description" content="Zero Office TikTok OAuth callback page for the account owner.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #111;
+    }
+    code, textarea {
+      font-family: Consolas, "Courier New", monospace;
+    }
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 84px;
+      padding: 12px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 14px;
+      border: 1px solid #111;
+      border-radius: 6px;
+      background: #111;
+      color: #fff;
+      cursor: pointer;
+    }
+    .box {
+      background: #f7f7f7;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    .error {
+      border-color: #c62828;
+      background: #fff5f5;
+    }
+  </style>
+</head>
+<body>
+  <h1>TikTok OAuth Callback</h1>
+  <p>
+    This page is used by the Zero Office account owner to complete TikTok OAuth.
+    Copy the authorization code below into the local OAuth exchange command.
+  </p>
+
+  <div id="result" class="box">
+    <p><strong>Status:</strong> Waiting for TikTok callback parameters.</p>
+  </div>
+
+  <p>
+    <a href="index.html">Back to Zero Office</a> |
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms of Service</a>
+  </p>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var code = params.get("code") || "";
+      var state = params.get("state") || "";
+      var error = params.get("error") || "";
+      var description = params.get("error_description") || "";
+      var result = document.getElementById("result");
+
+      function text(value) {
+        return String(value || "").replace(/[<>&]/g, function (char) {
+          return {"<": "&lt;", ">": "&gt;", "&": "&amp;"}[char];
+        });
+      }
+
+      if (error) {
+        result.className = "box error";
+        result.innerHTML =
+          "<p><strong>Status:</strong> TikTok returned an OAuth error.</p>" +
+          "<p><strong>Error:</strong> <code>" + text(error) + "</code></p>" +
+          "<p><strong>Description:</strong> " + text(description) + "</p>";
+        return;
+      }
+
+      if (!code) {
+        result.innerHTML =
+          "<p><strong>Status:</strong> No authorization code is present yet.</p>" +
+          "<p>Start OAuth from the local Zero Office helper and return here after TikTok redirects.</p>";
+        return;
+      }
+
+      result.innerHTML =
+        "<p><strong>Status:</strong> Authorization code received.</p>" +
+        "<label for=\"code\"><strong>Code</strong></label>" +
+        "<textarea id=\"code\" readonly></textarea>" +
+        "<button id=\"copy\">Copy code</button>" +
+        "<p><strong>State:</strong> <code>" + text(state) + "</code></p>" +
+        "<p>This page does not store the code. It is visible only in your browser URL and this local page view.</p>";
+      document.getElementById("code").value = code;
+      document.getElementById("copy").addEventListener("click", function () {
+        navigator.clipboard.writeText(code);
+      });
+    }());
+  </script>
+</body>
+</html>
